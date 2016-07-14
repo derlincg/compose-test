@@ -8,8 +8,11 @@ derlincg/compose-test:
     - PORT: "8000"
   Exec:
     - cd $DISTELLI_INSTALLHOME
+    - echo "print working directory"
+    - /bin/pwd
     - sudo /usr/local/bin/docker-compose up
+	- sudo /usr/local/bin/docker ps
   PostStart:
-      - sudo /usr/local/bin/docker ps
-      #- publicip=$(curl -s ident.me) || true
-      #- 'echo "You can validate the install by pointing your browser at http://$publicip"'
+    
+    #- publicip=$(curl -s ident.me) || true
+    #- 'echo "You can validate the install by pointing your browser at http://$publicip"'
