@@ -8,7 +8,7 @@ derlincg/compose-test:
     - PORT: "8000"
   Exec:
     - cd $DISTELLI_INSTALLHOME
-    - echo "print working directory"
+    - /bin/echo "print working directory"
     - /bin/pwd
     - sudo /usr/local/bin/docker-compose up
     - sudo /usr/local/bin/docker ps
