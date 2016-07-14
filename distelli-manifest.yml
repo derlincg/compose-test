@@ -9,6 +9,7 @@ derlincg/compose-test:
   Exec:
     - cd $DISTELLI_INSTALLHOME
     - sudo /usr/local/bin/docker-compose up
+    - sudo /usr/local/bin/docker ps
   PostStart:
       #- publicip=$(curl -s ident.me) || true
       #- 'echo "You can validate the install by pointing your browser at http://$publicip"'
